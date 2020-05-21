@@ -1,0 +1,30 @@
+#bloquePeriodicos{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+/*
+border: 1px solid rgb(47, 0, 255);
+border: 1px solid rgb(0, 255, 34);
+border: 1px solid red;
+*/
+#tituloPeriodicos {
+    background-color: black; 
+    color: blanchedalmond;
+    font-size: x-large;
+    font-weight: bold;
+}
+
+#listaPeriodicos{
+    font-size: 0;
+}
+
+#listaPeriodicos li {
+    display:inline;
+    padding-right:50px;
+}
+
+a:hover {
+    color:black;
+    background-color:lightgray;
+}

@@ -1,0 +1,23 @@
+<h1 class = "titleMisListas">
+  Estas son mis listas
+</h1>
+
+<div style = "font-weight: bold;">
+  Elige la lista: 
+<button (click) = activar()>Go!</button>
+</div>
+
+<form (submit)="addElement(newElement)">Añadir a la lista: 
+  <input type="text" #newElement name="newElement" [(ngModel)] ="new">
+  <button (click) ="clearNew()">
+    Send
+  </button>
+</form>
+<br>
+
+<ul *ngIf ="activated">
+  <li *ngFor="let elemento of elementos">
+    {{elemento}} <button (click) = "deleteElement(elemento)">X</button>
+  </li>
+</ul>
+{{new}}

@@ -1,0 +1,27 @@
+.iconoAngular {background-color: black;}
+
+/*#menuOuter{
+    background: repeat-x;
+}*/
+
+#menuPrincipal{
+    display: table; 
+    margin: 0 auto;
+}
+
+#menuPrincipal ul{
+    list-style:none;
+}
+
+#menuPrincipal li {
+    display:inline;
+    /*float: left; 
+    width:50.5%;*/
+}
+		
+/*#menuPrincipal ul li a {
+    display:block;
+    padding: 5px 32px;
+    color: #fff;
+    text-decoration: none;
+}*/
