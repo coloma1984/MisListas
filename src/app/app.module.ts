@@ -28,7 +28,7 @@ const routes: Route[] = [
     BrowserModule,
     FormsModule,
     HttpClientModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes, {useHash: true})
   ],
   providers: [DataService],
   bootstrap: [AppComponent]
