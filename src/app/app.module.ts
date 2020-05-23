@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule, Route} from '@angular/router'
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 import { AppComponent } from './app.component';
 import { ListaCompraComponent } from './lista-compra/lista-compra.component';
@@ -30,7 +31,7 @@ const routes: Route[] = [
     HttpClientModule,
     RouterModule.forRoot(routes, {useHash: true})
   ],
-  providers: [DataService],
+  providers: [DataService, {provide: LocationStrategy, useClass: HashLocationStrategy}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
