@@ -6,7 +6,7 @@ import { AboutComponent } from './about/about.component';
 const appRoutes: Route[] = [
   { path: 'listas', component: ListaCompraComponent},
   { path: 'about', component: AboutComponent},
-  { path: '', redirectTo: '/list', pathMatch:'full'}
+  { path: '', redirectTo: '/listas', pathMatch:'full'}
   ];
   
 @NgModule({
