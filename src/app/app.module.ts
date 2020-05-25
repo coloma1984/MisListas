@@ -14,6 +14,7 @@ import { PeriodicosComponent } from './periodicos/periodicos.component';
 
 
 const routes: Route[] = [
+{path:'', component: AppComponent},
 {path:'listas', component: ListaCompraComponent},
 {path:'about', component: AboutComponent}
 ];
