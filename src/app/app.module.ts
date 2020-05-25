@@ -29,9 +29,9 @@ const routes: Route[] = [
     BrowserModule,
     FormsModule,
     HttpClientModule,
-    RouterModule.forRoot(routes, {useHash: true})
+    RouterModule.forRoot(routes)
   ],
-  providers: [DataService, {provide: LocationStrategy, useClass: HashLocationStrategy}],
+  providers: [DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
