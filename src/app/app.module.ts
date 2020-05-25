@@ -2,8 +2,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { RouterModule, Route} from '@angular/router'
-import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 import { AppComponent } from './app.component';
 import { ListaCompraComponent } from './lista-compra/lista-compra.component';
@@ -11,13 +9,7 @@ import { ListaCompraComponent } from './lista-compra/lista-compra.component';
 import { DataService } from './data.service';
 import { AboutComponent } from './about/about.component';
 import { PeriodicosComponent } from './periodicos/periodicos.component';
-
-
-const routes: Route[] = [
-{path:'', component: AppComponent},
-{path:'listas', component: ListaCompraComponent},
-{path:'about', component: AboutComponent}
-];
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -30,7 +22,7 @@ const routes: Route[] = [
     BrowserModule,
     FormsModule,
     HttpClientModule,
-    RouterModule.forRoot(routes)
+    AppRoutingModule
   ],
   providers: [DataService],
   bootstrap: [AppComponent]
