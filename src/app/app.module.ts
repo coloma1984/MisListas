@@ -1,30 +1,37 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
-
-import { AppComponent } from './app.component';
-import { ListaCompraComponent } from './lista-compra/lista-compra.component';
 
 import { DataService } from './data.service';
-import { AboutComponent } from './about/about.component';
+import { DataApiService } from './services/data-api.service';
+
+import { AppComponent } from './app.component';
+import { RegistroComponent } from './registro/registro.component';
+import { PrincipalComponent } from './principal/principal.component';
+import { ListaCompraComponent } from './lista-compra/lista-compra.component';
 import { PeriodicosComponent } from './periodicos/periodicos.component';
-import { AppRoutingModule } from './app-routing.module';
+import { AboutComponent } from './about/about.component';
+
+import { AppRoutingModule } from './modules/app-routing.module';
+import { AppTranslateModule } from './modules/app-translate.module';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     ListaCompraComponent,
     AboutComponent,
-    PeriodicosComponent
+    PeriodicosComponent,
+    RegistroComponent,
+    PrincipalComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    AppTranslateModule
   ],
-  providers: [DataService],
+  providers: [DataService, DataApiService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

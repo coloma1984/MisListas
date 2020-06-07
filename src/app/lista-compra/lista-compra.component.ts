@@ -1,4 +1,6 @@
 import { Component, OnInit, Input} from '@angular/core';
+import { Router} from '@angular/router';
+
 
 @Component({
   selector: 'app-lista-compra',
@@ -12,6 +14,10 @@ export class ListaCompraComponent implements OnInit {
   listTitle: string; 
   list = [];
   activated: boolean = true;
+  router: Router;
+  toggle: boolean = true;
+
+  buttonStatus = 'Enable';
 
   constructor() { 
     this.elementos = ['fruta', 'carne', 'pescado'];
@@ -40,6 +46,23 @@ export class ListaCompraComponent implements OnInit {
         this.elementos.splice(i,1);
       }
     };
+  }
+
+  changeColor(elemento){
+    console.log("Se ha añadido "+elemento+" a la cesta");
+    for(let i=0; i< this.elementos.length; i++) {
+      if(elemento == this.elementos[i]){
+        console.log("El elemento num "+i+" que es "+elemento+" se ha toggleado");
+        this.toggle = !this.toggle;
+      }
+    };
+    //this.buttonStatus = this.toggle ? 'Enable' : 'Disable';
+  }
+
+  whenClicked = [false,false];
+
+  tracked(item, index){
+    return index;
   }
 
   ngOnInit() {

@@ -1,23 +1,35 @@
+<br>
 <h1 class = "titleMisListas">
   Estas son mis listas
 </h1>
+<br>
 
-<div style = "font-weight: bold;">
+<div class= "chooseList" style = "font-weight: bold;">
   Elige la lista: 
 <button (click) = activar()>Go!</button>
 </div>
+<br>
 
+<div class = "addToList">
 <form (submit)="addElement(newElement)">Añadir a la lista: 
   <input type="text" #newElement name="newElement" [(ngModel)] ="new">
   <button (click) ="clearNew()">
     Send
   </button>
 </form>
+</div>
 <br>
 
 <ul *ngIf ="activated">
-  <li *ngFor="let elemento of elementos">
-    {{elemento}} <button (click) = "deleteElement(elemento)">X</button>
+  <li *ngFor="let elemento of elementos; let i = index; trackBy: tracked" >
+    <div><button id="ingButton" type="button" (click) = "whenClicked[i]=!whenClicked[i]" [ngClass]="whenClicked[i] ? 'red' : 'green'" >
+    {{i}}-{{elemento}} </button><button (click) = "whenClicked[i]=true; deleteElement(elemento)">X</button></div>
   </li>
 </ul>
 {{new}}
+<br>
+<!--; changeColor(elemento)
+<button type="button" mdbBtn color="info" mdbWavesEffect>Info</button>
+
+
+[ngClass]="{'green' : toggle, 'red': !toggle}"-->

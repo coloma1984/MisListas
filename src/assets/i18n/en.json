@@ -1,0 +1,10 @@
+{
+    "APP":{
+        "NAV":{
+            "PRINCIPAL":"Main",
+            "LISTAS":"Lists",
+            "NEWS":"News",
+            "INFO":"Info"
+        }
+    }   
+}

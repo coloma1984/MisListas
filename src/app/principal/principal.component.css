@@ -1,0 +1,16 @@
+
+#menuPrincipal{
+    display: table; 
+    margin: 0 auto;
+}
+
+#menuPrincipal ul{
+    list-style:none;
+}
+
+#menuPrincipal li {
+    display:inline;
+    padding-left: 60px;
+    /*float: left; 
+    width:50.5%;*/
+}
