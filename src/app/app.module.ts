@@ -15,6 +15,9 @@ import { AboutComponent } from './about/about.component';
 import { AppRoutingModule } from './modules/app-routing.module';
 import { AppTranslateModule } from './modules/app-translate.module';
 
+import { MaterialModule } from './material';
+import { BrowserAnimationsModule} from '@angular/platform-browser/animations';
+
 
 @NgModule({
   declarations: [
@@ -29,7 +32,8 @@ import { AppTranslateModule } from './modules/app-translate.module';
     BrowserModule,
     FormsModule,
     AppRoutingModule,
-    AppTranslateModule
+    AppTranslateModule,
+    BrowserAnimationsModule
   ],
   providers: [DataService, DataApiService],
   bootstrap: [AppComponent]
